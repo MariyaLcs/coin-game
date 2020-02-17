@@ -29,6 +29,7 @@ window.addEventListener("keyup", function(e) {
     avatar.style.left = `${currLeft - 50}px`;
     avatar.style.transform = "scale(-1, 1)";
   }
+  if (isTouching(avatar, coin)) moveCoin();
 });
 
 const exstractPos = pos => {
@@ -42,3 +43,5 @@ const moveCoin = () => {
   coin.style.top = `${y}px`;
   coin.style.left = `${x}px`;
 };
+
+moveCoin();
